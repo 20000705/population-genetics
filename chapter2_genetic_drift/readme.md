@@ -18,15 +18,18 @@ Here, \( 4Nu \) reflects the balance between mutation and drift, where \( N \) i
 
 ## 2.3: Rate of Substitution
 In neutral theory, the rate at which mutations become fixed in a population (the substitution rate, \( k \)) equals the mutation rate, \( u \). Although genetic drift can cause allele frequencies to fluctuate, the substitution rate remains:
+
 $$
 k = u
 $$
+
 because the number of new mutations entering the population each generation is balanced by the proportion of those mutations that get fixed. This result implies that the rate of evolution is independent of population size when considering neutral mutations.
 
 ## 2.4: The Neutral Theory
 The neutral theory of molecular evolution claims that most genetic changes at the molecular level are caused by genetic drift rather than natural selection. According to the theory, most mutations are neutral and do not affect an organism’s fitness. This theory explains the constancy of molecular evolution, as the rate of substitution is determined by the mutation rate rather than selection pressures.
 
 The concept of a molecular clock emerges from this theory: genetic changes accumulate at a constant rate over time, allowing biologists to estimate divergence times between species. One key aspect of the neutral theory is that the rate of substitution for neutral mutations is constant and equal to the mutation rate \( u \), leading to the equation:
+
 $$
 k = u
 $$
