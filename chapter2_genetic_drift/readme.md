@@ -1,74 +1,52 @@
-# Genetic Drift: Example Problems and Solutions
+# Summary of Genetic Drift and Related Concepts
 
-## 2.1 The Basic Model of Genetic Drift
-In a population of size \( N \), genetic drift is the random fluctuation of allele frequencies due to random sampling. The probability that two alleles drawn from a population are identical by descent is called **homozygosity** (\( G \)), while the probability that two alleles are different by state is called **heterozygosity** (\( H \)).
+## 2.1: Genetic Drift in a Small Population
+Genetic drift causes random changes in allele frequencies, especially in small populations. It reduces heterozygosity over time as some alleles randomly become fixed while others are lost. In smaller populations, the effects of genetic drift are stronger because chance events have a bigger impact on the population’s genetic structure. Heterozygosity, the measure of genetic variation, decays at a rate proportional to 
+$$
+\frac{1}{2N}
+$$
+where \( N \) is the population size. The smaller the population, the quicker the decline in heterozygosity.
 
-At equilibrium, the probability that two alleles are identical by descent is:
+## 2.2: Mutation and Drift
+Mutation introduces new alleles into the population, while drift removes them. This interaction between drift and mutation determines the overall level of genetic variation. At equilibrium, genetic drift removes variation at the same rate that mutations introduce it, maintaining a balance. The probability that two alleles are identical by state at equilibrium is given by:
 
 $$
-G = \frac{1}{1 + 4Nu}
+\hat{G} = \frac{1}{1 + 4Nu}
 $$
 
-Where:
-- \( N \) = Population size
-- \( u \) = Mutation rate per generation.
+Here, \( 4Nu \) reflects the balance between mutation and drift, where \( N \) is the population size and \( u \) is the mutation rate. In larger populations or populations with higher mutation rates, more genetic variation is maintained.
 
-## 2.2 Rate of Decay of Heterozygosity
-The decay of heterozygosity over time can be described using the following equation:
-
+## 2.3: Rate of Substitution
+In neutral theory, the rate at which mutations become fixed in a population (the substitution rate, \( k \)) equals the mutation rate, \( u \). Although genetic drift can cause allele frequencies to fluctuate, the substitution rate remains:
 $$
-H_{t+1} = H_t \left( 1 - \frac{1}{2N} \right)
+k = u
 $$
+because the number of new mutations entering the population each generation is balanced by the proportion of those mutations that get fixed. This result implies that the rate of evolution is independent of population size when considering neutral mutations.
 
-Where \( H_t \) is the heterozygosity at generation \( t \).
+## 2.4: The Neutral Theory
+The neutral theory of molecular evolution claims that most genetic changes at the molecular level are caused by genetic drift rather than natural selection. According to the theory, most mutations are neutral and do not affect an organism’s fitness. This theory explains the constancy of molecular evolution, as the rate of substitution is determined by the mutation rate rather than selection pressures.
 
-### Problem 2.3: Average Time to Homozygosity
-The average time for a population to become homozygous is approximately two generations. The formula can be written as:
-
+The concept of a molecular clock emerges from this theory: genetic changes accumulate at a constant rate over time, allowing biologists to estimate divergence times between species. One key aspect of the neutral theory is that the rate of substitution for neutral mutations is constant and equal to the mutation rate \( u \), leading to the equation:
 $$
-\mathbb{E}(T_c) = 4N \left( 1 + \frac{1}{2} + \frac{1}{3} \right)
+k = u
 $$
 
-## 2.4 Mutation and Drift
-Mutation introduces variation into the population at a rate \( 2Nu \), while genetic drift eliminates variation at a rate \( 1/(2N) \). At equilibrium, the balance between mutation and drift is expressed by:
+## 2.5: Effective Population Size
+In real populations, sizes often fluctuate, and individuals may not contribute equally to the next generation’s gene pool. To account for this, population geneticists use the concept of effective population size \( N_e \), which represents the size of an idealized population that experiences the same rate of genetic drift as the real population. Factors like population bottlenecks, unequal numbers of breeding males and females, or fluctuations in population size reduce the effective population size relative to the actual population size. The effective size of a population with fluctuating size over generations is given by the harmonic mean of the population sizes over time:
 
 $$
-G = \frac{1}{1 + 4Nu}
+N_e \approx \left( \frac{1}{t} \sum_{i=1}^{t} \frac{1}{N_i} \right)^{-1}
 $$
 
-Where \( G \) is the probability of homozygosity.
+This formula highlights that the effective population size is most influenced by periods of small population sizes (bottlenecks).
 
-## 2.5 Effective Population Size
-The **effective population size** \( N_e \) is defined as the size of an idealized population that loses heterozygosity at the same rate as the actual population. If the population size fluctuates, the effective population size can be calculated as the harmonic mean:
+## 2.6: The Coalescent
+The coalescent process is a model that traces the genealogical relationships of alleles in a population back to their common ancestor. In a coalescent framework, the focus is on how lineages merge (or coalesce) as one moves backward in time. The rate at which coalescent events occur depends on the population size \( N \). In small populations, alleles coalesce more quickly because there are fewer individuals, while in large populations, the time to coalescence is longer.
 
-$$
-N_e = \left( \frac{1}{t} \sum_{i=1}^t \frac{1}{N_i} \right)^{-1}
-$$
-
-Where \( N_i \) is the population size at generation \( i \).
-
-## 2.6 The Coalescent
-The coalescent process traces the genealogy of alleles back to their most recent common ancestor. The expected coalescence time for a sample of size \( n \) is given by:
+The time until coalescence for a sample of alleles can be calculated, and it provides insight into the amount of genetic diversity and the impact of genetic drift. For example, the expected total time to coalescence for a sample of \( n \) alleles is:
 
 $$
-\mathbb{E}(T_n) = \frac{4N}{n(n-1)}
+E(T_c) = 4N \sum_{i=2}^{n} \frac{1}{i(i-1)}
 $$
 
-The total coalescent time for \( n \) alleles is:
-
-$$
-T_c = \sum_{i=2}^{n} i T_i = 4N \sum_{i=2}^{n} \frac{1}{i(i-1)}
-$$
-
-## Problem 2.12: Estimating \( \theta \)
-For a neutral mutation rate \( u \), the expected number of segregating sites \( S_n \) is related to \( \theta = 4Nu \) by the equation:
-
-$$
-\mathbb{E}(S_n) = \theta \sum_{i=2}^{n} \frac{1}{i-1}
-$$
-
-An estimator for \( \theta \) is:
-
-$$
-\hat{\theta} = \frac{S_n}{\sum_{i=2}^{n} \frac{1}{i-1}}
-$$
+The coalescent process is useful for making inferences about genetic diversity, mutation rates, and the evolutionary history of populations.
