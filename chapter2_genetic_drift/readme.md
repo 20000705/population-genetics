@@ -2,9 +2,11 @@
 
 ## 2.1: Genetic Drift in a Small Population
 Genetic drift causes random changes in allele frequencies, especially in small populations. It reduces heterozygosity over time as some alleles randomly become fixed while others are lost. In smaller populations, the effects of genetic drift are stronger because chance events have a bigger impact on the population’s genetic structure. Heterozygosity, the measure of genetic variation, decays at a rate proportional to 
+
 $$
 \frac{1}{2N}
 $$
+
 where \( N \) is the population size. The smaller the population, the quicker the decline in heterozygosity.
 
 ## 2.2: Mutation and Drift
