@@ -63,7 +63,7 @@ $$
 \text{Prob}(i \ A_1 \ \text{alleles}) = \frac{(2N)!}{i!(2N-i)!} p^i q^{2N-i}
 $$
 
-Where \( p \) is the frequency of allele \( A_1 \), and \( q = 1 - p \) is the frequency of the other allele. The expected number of \( A_1 \) alleles in the next generation is \( E\{i\} = 2Np \), and the variance of the allele frequency change, \( \Delta p \), is:
+Where \( p \) is the frequency of allele \( A_1 \), and \( q = 1 - p \) is the frequency of the other allele. The expected number of \( A_1 \) alleles in the next generation is \( E\{i\} = 2Np \), and the variance of the allele frequency change, \( Delta p \), is:
 
 $$
 \text{Var}(\Delta p | p) = \frac{pq}{2N}
