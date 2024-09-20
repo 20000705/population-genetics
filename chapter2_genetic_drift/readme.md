@@ -55,3 +55,18 @@ E(T_c) = 4N \sum_{i=2}^{n} \frac{1}{i(i-1)}
 $$
 
 The coalescent process is useful for making inferences about genetic diversity, mutation rates, and the evolutionary history of populations.
+
+## 2.7: Binomial Sampling
+Genetic drift, as described in earlier sections, reduces heterozygosity over time. However, the randomness of genetic drift is best captured using binomial sampling. Each generation, the alleles of the population are sampled binomially, leading to fluctuations in allele frequencies. The probability that \( i \) alleles of type \( A_1 \) are passed to the next generation is given by the binomial probability:
+
+$$
+\text{Prob}(i \ A_1 \ \text{alleles}) = \frac{(2N)!}{i!(2N-i)!} p^i q^{2N-i}
+$$
+
+Where \( p \) is the frequency of allele \( A_1 \), and \( q = 1 - p \) is the frequency of the other allele. The expected number of \( A_1 \) alleles in the next generation is \( E\{i\} = 2Np \), and the variance of the allele frequency change, \( \Delta p \), is:
+
+$$
+\text{Var}(\Delta p | p) = \frac{pq}{2N}
+$$
+
+This variance decreases as the population size increases, meaning genetic drift has a larger impact on smaller populations. The allele frequencies fluctuate randomly, and the variance shows how much those frequencies are expected to change from one generation to the next.
