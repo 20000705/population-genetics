@@ -12,12 +12,12 @@ A **locus** refers to the position on a chromosome, while an **allele** is the s
 ## 1.3 Genotype and Allele Frequencies
 In population genetics, the structure of a population is described by the relative frequencies of genotypes and alleles. Given two alleles \(A1\) and \(A2\), the allele frequencies can be calculated as:
 
-$
+$$
 p = \frac{2 \times \text{freq(A1A1)} + \text{freq(A1A2)}}{2 \times \text{population size}}
 \]
 \[
 q = 1 - p
-$
+$$
 
 ## 1.4 Randomly Mating Populations
 The **Hardy-Weinberg equilibrium** describes how allele and genotype frequencies remain stable in a randomly mating population free of evolutionary forces:
